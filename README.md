@@ -70,14 +70,16 @@ Feedback Loop →
 
 Each case consists of:
 
-### **User Basic Information**
+### 1. User Basic Information**
 ```json
 "User_Basic_Information": {
   "User_Interaction_Type": "RU",
   "Scenario": "ET"
 }
+```
 
-2. Disposal Behavior (Problem Features)
+### 2. Disposal Behavior (Problem Features)
+```json
   "Problem": {
   "Disposal_Behavior": {
     "PO-PD": 1,
@@ -90,8 +92,10 @@ Each case consists of:
     "NG-LOG": 0
   }
 }
+```
 
-3. Context
+### 3. Context
+```json
   "Context": {
   "PF-LPA": 1,
   "PF-CRG": 1,
@@ -101,11 +105,15 @@ Each case consists of:
   "EF-INOB": 1,
   "EF-SPB": 0
 }
+```
 
-4. Evaluation Outcome
+### 4. Evaluation Outcome
+```json
   "Evaluation_Outcome": "IA"
+```
 
-5. Solutions
+### 5. Solutions
+```json
   "Solutions": [
   { "Category": "TUX", "Type": "TUX-SRS" },
   { "Category": "BUX", "Type": "BUX-CRG" },
@@ -118,8 +126,18 @@ Total Similarity =
   + w_behavior * Sim(Disposal Behavior)
   + w_context * Sim(Context)
   + w_solutions * Sim(Solutions)
+```
+```
+Similarity score is computed as:
+Total Similarity =
+    w_user * Sim(User Info)
+  + w_behavior * Sim(Disposal Behavior)
+  + w_context * Sim(Context)
+  + w_solutions * Sim(Solutions)
+```
 
-Example group weights:
+### 6. Example group weights:
+```python
 Group_Weights = {
     "User_Info": 0.15,
     "Disposal_Behavior": 0.45,
@@ -127,7 +145,9 @@ Group_Weights = {
     "Solutions": 0.10
 }
 ```
+
 # Repository Structure
+```json
 smartcity-park-ux-planning-cbr/
 │
 ├── data/
@@ -141,9 +161,12 @@ smartcity-park-ux-planning-cbr/
 │   └── solution_engine.py
 │
 └── README.md
+```
 
 # How to Run
+```python
   python cbr/main.py
+```
 
 # Example Output
   Most Similar Case: C014 (similarity 0.82)
