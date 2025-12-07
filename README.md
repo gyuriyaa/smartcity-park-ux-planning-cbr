@@ -119,14 +119,8 @@ Each case consists of:
   { "Category": "BUX", "Type": "BUX-CRG" },
   { "Category": "SUX", "Type": "SUX-TCS" }
 ]
-
-Similarity score is computed as:
-Total Similarity =
-    w_user * Sim(User Info)
-  + w_behavior * Sim(Disposal Behavior)
-  + w_context * Sim(Context)
-  + w_solutions * Sim(Solutions)
 ```
+
 ```
 Similarity score is computed as:
 Total Similarity =
@@ -147,7 +141,7 @@ Group_Weights = {
 ```
 
 # Repository Structure
-```json
+```
 smartcity-park-ux-planning-cbr/
 │
 ├── data/
@@ -164,8 +158,8 @@ smartcity-park-ux-planning-cbr/
 ```
 
 # How to Run
-```python
-  python cbr/main.py
+```bash
+python cbr/main.py
 ```
 
 # Example Output
