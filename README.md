@@ -172,8 +172,10 @@ Represents whether the user behavior was appropriate given the context and envir
 ---
 
 # Case Base Summary
-The system currently includes **10 curated cases** representing diverse user behaviors, contexts, and Smart City UX interventions within park environments.
+The system currently includes **11 curated cases** representing diverse user behaviors, contexts, and Smart City UX/Service/Spatial interventions within park environments.  
+These cases support CBR similarity matching, evaluation, and multi-dimensional UX solution generation.
 
+| Case ID | User Type | Scenario | Behavior | Context | Eval | UX Solution | Smart City Solution |
 | Case ID | User Type | Scenario | Disposal Behavior | Context | Evaluation | UX Solution | Smart City Design Solution |
 |--------|-----------|----------|-------------------|---------|------------|-------------|-----------------------------|
 | **01** | Visitor | Picnic | Littering | Difficulty finding trash can (No signage) | IA | Add trashcans + signage | Integrated Waste Mgmt System + Smart Recycling Stations |
@@ -186,6 +188,7 @@ The system currently includes **10 curated cases** representing diverse user beh
 | **08** | Visitor | Picnic | Packing out trash | Seasonal waste fluctuations | A | Add bins & staffing in peaks | Predictive seasonal waste scheduling |
 | **09** | Visitor | Event Participation | Trash but not recycle | Overflowing bin | IA | Temporary event waste stations | Educational/Interactive waste engagement during events |
 | **10** | Vendor | Event Selling | Trash in restroom | Difficulty finding trashcan | IA | Increase bins for vendors | Waste location wayfinding (Vendor App) |
+| **11** | RU | ET (Trails) | Mixed: PO-PD + NT-POT | EF-DFTC | PA | Signage + extra bins on trails | TUX-IWMS + BUX-PEAP |
 
 ---
 
