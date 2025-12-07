@@ -184,7 +184,7 @@ MIT License
 
 # Author
 Gyuri Sim (심규리)
-HCI Research · UX Planning · Smart City Interaction Design
+HCI Research · UX Planning · Interaction Design · Smart City
 
 
 
