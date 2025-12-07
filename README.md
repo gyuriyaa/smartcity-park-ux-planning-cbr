@@ -9,7 +9,8 @@ A Smart City CBR system that analyzes park user behavior and recommends optimize
 # 📌 Table of Contents
 - [About The Project](#about-the-project)
 - [CBR Workflow](#cbr-workflow)
-- [Case Features](#cbr-features)
+- [Case Features](#case-features)
+- [Case Base Summary](#case-base-summary)
 - [Case Structure](#case-structure)
 - [Similarity Model](#similarity-model)
 - [Repository Structure](#repository-structure)
@@ -68,107 +69,126 @@ Feedback Loop →
 ___
 # Case Features
 
-This CBR system relies on structured cases representing **user behavior**, **context**, and **UX-related outcomes** within a Smart City park environment.  
-Each case consists of three major components: **User Basic Information**, **Problem**, and **Solutions**.
+The CBR system evaluates Smart City park waste-related behaviors using a structured feature schema that includes **User Basic Information**, **Problem (Behavior + Context)**, and **Evaluation Outcome**.  
+These features are encoded consistently for similarity matching and solution recommendation.
 
 ---
 
 ## **1. User Basic Information**
 
-### **1-1. User Type**
-Represents who is interacting with the park environment.
+### **1-1. User Interaction Type (User_Interaction_Type)**
 
-- **Visitor**  
-  (Recreational users, casual users)
-
-### **1-2. Scenario**
-Describes what activity the user is performing.
-
-- Walking  
-- Picnic  
-- Playground Activities  
-- Sports Activities  
-- Participating in Events  
+| Code | Type | Description |
+|------|------|-------------|
+| **RU** | Recreational Users | Individuals/groups engaging in leisure activities (walking, sports, picnics, relaxation) |
+| **SIU** | Special Interest Users | Visitors with specific interests (pet owners, bird watchers, fitness users, etc.) |
+| **EP** | Event Participants | Visitors attending scheduled events (public or private) |
+| **CEU** | Cultural & Educational Users | School groups, tourists, or visitors engaging in learning activities |
+| **OS** | Operational Staff | Park workers (maintenance, safety, administration, event organizers) |
+| **SS** | Support Services | External vendors (food trucks, rental services, tour guides) |
 
 ---
 
-## **2. Problem**
+### **1-2. Scenario (Scenario)**  
+Represents the activity context in which the behavior occurs.
 
-This section describes the user’s **behavior (Variable A)** and the surrounding **context (Variable B)** that influenced the behavior.
-
----
-
-### **2-1. Disposal Behavior**  
-**Variable A (User Behavior)**  
-Describes the waste disposal action taken by the user.
-
-- Packing out trash  
-- Proper disposal  
-- Recycling correctly  
-- Picking up litter & ensuring proper disposal  
-- Disposing trash in a public restroom  
-- Trash disposal without recycling  
-- Littering  
+| Code | Scenario | Description |
+|------|----------|-------------|
+| **ET** | Exploring Trails | Walking, hiking, jogging; movement-based exploration |
+| **EP** | Enjoying Picnics | Eating outdoors, group socializing, finding picnic spots |
+| **EIP** | Engaging in Play | Children/family play and interactive installations |
+| **PS** | Participating in Sports | Sports participation (organized or casual) |
+| **AE** | Attending Events | Concerts, festivals, community or private gatherings |
+| **ON** | Observing Nature | Bird-watching, photography, nature appreciation |
+| **RS** | Relaxing in Solitude | Meditation, reading, resting in quiet areas |
 
 ---
 
-### **2-2. Context**  
-**Variable B (User Context)**  
-Environmental or personal conditions influencing user behavior.
+## **2. Problem (Behavior + Context)**
 
-#### **Personal Factors**
-- Lack of public awareness  
-- Confusing sorting/recycling guidelines  
-
-#### **Environmental Factors**
-- Overflowing trash bin  
-- Seasonal waste spike  
-- Difficult to find trash can (lack of signage)  
-- Insufficient number of bins (relative to area and foot traffic)  
+The system encodes both **Disposal Behavior** and **Context** to understand why a certain waste-related action occurred.
 
 ---
 
-### **2-3. Evaluation Consequence (A + B)**  
-Represents how appropriate the behavior was, considering both the behavior and the context together.
+### **2-1. Disposal Behavior (Disposal_Behavior)**
 
-- **Appropriate (A)**  
-- **Inappropriate (IA)**  
+#### **Positive Behavior (PO)**  
+| Code | Behavior | Meaning |
+|------|----------|---------|
+| **PO-PD** | Proper Disposal | Trash disposed correctly |
+| **PO-RC** | Recycling Correctly | User sorts recyclables correctly |
+| **PO-PULPD** | Picking Up Litter | User picks up litter & disposes properly |
 
----
+#### **Neutral Behavior (NT)**  
+| Code | Behavior | Meaning |
+|------|----------|---------|
+| **NT-DNRO** | Disposing Non-recyclables Only | Does not sort recyclables; disposes only general waste |
+| **NT-POT** | Packing Out Trash | User carries trash out (take-out behavior) |
 
-## **3. Solutions**
-
-### **3-1. UX Solutions (Basic UX Suggestions)**  
-Design or communication interventions that can mitigate the problem.
-
-- Campaign for proper waste disposal  
-- Waste volume management  
-- Clear recycling guidelines  
-- Adaptive bin placement based on population  
-- Provide trash can signage  
-- Add additional bins  
-
----
-
-### **3-2. Smart Solutions (Advanced Interventions)**  
-Combined or technology-driven solutions derived from UX suggestions.
-
-#### **A. Integrated Waste Management System**
-- Predictive waste handling  
-- Adjust collection schedules based on bin sensor data  
-
-#### **B. Smart Recycling Stations**
-- Marked recycling stations  
-- Reward-based participation (e.g., NFC/QR tagging)  
-
-#### **C. Public Engagement and Awareness Programs**
-- Recycling education  
-- Sport-based or gamified recycling activities  
+#### **Negative Behavior (NG)**  
+| Code | Behavior | Meaning |
+|------|----------|---------|
+| **NG-IRBU** | Incorrect Recycling Bin Use | Wrong sorting / misuse of recycling bins |
+| **NG-DTPR** | Trash in Public Restrooms | Discards waste in restroom bins |
+| **NG-LOG** | Littering on the Ground | Leaves trash in open areas |
 
 ---
 
+### **2-2. Context (Context)**  
+Conditions influencing the user’s behavior.
+
+#### **Bad Context**
+
+##### **Personal Factors**
+| Code | Meaning |
+|------|---------|
+| **PF-LPA** | Lack of Public Awareness |
+| **PF-CRG** | Confusing Recycling Guidelines |
+
+##### **Environmental Factors**
+| Code | Meaning |
+|------|---------|
+| **EF-OTB** | Overflowing Trash Bin |
+| **EF-SWS** | Seasonal Waste Spike |
+| **EF-DFTC** | Difficulty Finding Trash Can (Lack of signage / visibility) |
+| **EF-INOB** | Insufficient Number of Bins |
+
+#### **Good Context**
+| Code | Meaning |
+|------|---------|
+| **EF-SPB** | Strategically Placed Bins (picnic areas, sports fields, walking paths) |
 
 ---
+
+## **3. Evaluation Outcome (Evaluation_Outcome)**  
+Represents whether the user behavior was appropriate given the context and environment.
+
+| Code | Meaning |
+|------|---------|
+| **A** | Appropriate |
+| **PA** | Partially Appropriate |
+| **IA** | Inappropriate |
+
+---
+
+# Case Base Summary
+The system currently includes **10 curated cases** representing diverse user behaviors, contexts, and Smart City UX interventions within park environments.
+
+| Case ID | User Type | Scenario | Disposal Behavior | Context | Evaluation | UX Solution | Smart City Design Solution |
+|--------|-----------|----------|-------------------|---------|------------|-------------|-----------------------------|
+| **01** | Visitor | Picnic | Littering | Difficulty finding trash can (No signage) | IA | Add trashcans + signage | Integrated Waste Mgmt System + Smart Recycling Stations |
+| **02** | Family | Picnic | Trash in restroom | Overflowing bin | IA | Deploy mobile waste bins | Adaptive Waste Collection Schedule |
+| **03** | Children | Playground | Trash in restroom | Unclear sorting guidelines | IA | Clear recycling guidelines | Educational & Interactive Waste Disposal |
+| **04** | Visitor | Picnic | Proper disposal | Strategically placed bins | A | Maintain bin placement | Expanded Smart Bin System |
+| **05** | Visitor | Playground | Recycling | Walking path context | A | Maintain & promote recycling | Smart Recycling Stations |
+| **06** | Visitor | Sports | Trash but not recycle | Lack of public awareness | IA | Waste disposal campaign | Sports-themed engagement program |
+| **07** | Visitor | Walking | Packing out trash | Jogging route (normal) | A | Incentives for pack-out | Accessible waste point design |
+| **08** | Visitor | Picnic | Packing out trash | Seasonal waste fluctuations | A | Add bins & staffing in peaks | Predictive seasonal waste scheduling |
+| **09** | Visitor | Event Participation | Trash but not recycle | Overflowing bin | IA | Temporary event waste stations | Educational/Interactive waste engagement during events |
+| **10** | Vendor | Event Selling | Trash in restroom | Difficulty finding trashcan | IA | Increase bins for vendors | Waste location wayfinding (Vendor App) |
+
+---
+
 
 # Case Structure
 
