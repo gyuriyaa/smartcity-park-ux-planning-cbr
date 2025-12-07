@@ -1,0 +1,333 @@
+[
+  {
+    "CaseID": "01",
+    "User_Basic_Information": {
+      "User_Interaction_Type": "Visitor",
+      "Scenario": "Picnic"
+    },
+    "Problem": {
+      "Disposal_Behavior": {
+        "PO-PD": 0,
+        "PO-RC": 0,
+        "PO-PULPD": 0,
+        "NT-DNRO": 0,
+        "NT-POT": 0,
+        "NG-IRBU": 0,
+        "NG-DTPR": 0,
+        "NG-LOG": 1
+      }
+    },
+    "Context": {
+      "PF-LPA": 0,
+      "PF-CRG": 0,
+      "EF-OTB": 0,
+      "EF-SWS": 0,
+      "EF-DFTC": 1,
+      "EF-INOB": 0,
+      "EF-SPB": 0
+    },
+    "Evaluation_Outcome": "IA",
+    "Solutions": [
+      { "Category": "SUX", "Type": "Add Trashcans + Signage" },
+      { "Category": "TUX", "Type": "Integrated Waste Management System (Predictive + Adjust Collection)" },
+      { "Category": "TUX", "Type": "Smart Recycling Stations (Marked Stations)" }
+    ]
+  },
+  {
+    "CaseID": "02",
+    "User_Basic_Information": {
+      "User_Interaction_Type": "Family",
+      "Scenario": "Picnic"
+    },
+    "Problem": {
+      "Disposal_Behavior": {
+        "PO-PD": 0,
+        "PO-RC": 0,
+        "PO-PULPD": 0,
+        "NT-DNRO": 0,
+        "NT-POT": 0,
+        "NG-IRBU": 0,
+        "NG-DTPR": 1,
+        "NG-LOG": 0
+      }
+    },
+    "Context": {
+      "PF-LPA": 0,
+      "PF-CRG": 0,
+      "EF-OTB": 1,
+      "EF-SWS": 0,
+      "EF-DFTC": 0,
+      "EF-INOB": 0,
+      "EF-SPB": 0
+    },
+    "Evaluation_Outcome": "IA",
+    "Solutions": [
+      { "Category": "SUX", "Type": "Mobile Waste Bins Deployment" },
+      { "Category": "TUX", "Type": "Adaptive Waste Collection Schedule" }
+    ]
+  },
+  {
+    "CaseID": "03",
+    "User_Basic_Information": {
+      "User_Interaction_Type": "Children",
+      "Scenario": "Playground"
+    },
+    "Problem": {
+      "Disposal_Behavior": {
+        "PO-PD": 0,
+        "PO-RC": 0,
+        "PO-PULPD": 0,
+        "NT-DNRO": 0,
+        "NT-POT": 0,
+        "NG-IRBU": 0,
+        "NG-DTPR": 1,
+        "NG-LOG": 0
+      }
+    },
+    "Context": {
+      "PF-LPA": 0,
+      "PF-CRG": 1,
+      "EF-OTB": 0,
+      "EF-SWS": 0,
+      "EF-DFTC": 0,
+      "EF-INOB": 0,
+      "EF-SPB": 0
+    },
+    "Evaluation_Outcome": "IA",
+    "Solutions": [
+      { "Category": "BUX", "Type": "Clear Recycling Guidelines" },
+      { "Category": "TUX", "Type": "Educational Signage & Interactive Disposal" }
+    ]
+  },
+  {
+    "CaseID": "04",
+    "User_Basic_Information": {
+      "User_Interaction_Type": "Visitor",
+      "Scenario": "Picnic"
+    },
+    "Problem": {
+      "Disposal_Behavior": {
+        "PO-PD": 1,
+        "PO-RC": 0,
+        "PO-PULPD": 0,
+        "NT-DNRO": 0,
+        "NT-POT": 0,
+        "NG-IRBU": 0,
+        "NG-DTPR": 0,
+        "NG-LOG": 0
+      }
+    },
+    "Context": {
+      "PF-LPA": 0,
+      "PF-CRG": 0,
+      "EF-OTB": 0,
+      "EF-SWS": 0,
+      "EF-DFTC": 0,
+      "EF-INOB": 0,
+      "EF-SPB": 1
+    },
+    "Evaluation_Outcome": "A",
+    "Solutions": [
+      { "Category": "SUX", "Type": "Strategic Bin Placement Maintenance" },
+      { "Category": "TUX", "Type": "Integrated Waste Management System Expansion" }
+    ]
+  },
+  {
+    "CaseID": "05",
+    "User_Basic_Information": {
+      "User_Interaction_Type": "Visitor",
+      "Scenario": "Playground"
+    },
+    "Problem": {
+      "Disposal_Behavior": {
+        "PO-PD": 0,
+        "PO-RC": 1,
+        "PO-PULPD": 0,
+        "NT-DNRO": 0,
+        "NT-POT": 0,
+        "NG-IRBU": 0,
+        "NG-DTPR": 0,
+        "NG-LOG": 0
+      }
+    },
+    "Context": {
+      "PF-LPA": 0,
+      "PF-CRG": 0,
+      "EF-OTB": 0,
+      "EF-SWS": 0,
+      "EF-DFTC": 0,
+      "EF-INOB": 0,
+      "EF-SPB": 1
+    },
+    "Evaluation_Outcome": "A",
+    "Solutions": [
+      { "Category": "TUX", "Type": "Smart Recycling Stations (Walking Path)" }
+    ]
+  },
+  {
+    "CaseID": "06",
+    "User_Basic_Information": {
+      "User_Interaction_Type": "Visitor",
+      "Scenario": "Sports"
+    },
+    "Problem": {
+      "Disposal_Behavior": {
+        "PO-PD": 0,
+        "PO-RC": 0,
+        "PO-PULPD": 0,
+        "NT-DNRO": 1,
+        "NT-POT": 0,
+        "NG-IRBU": 0,
+        "NG-DTPR": 0,
+        "NG-LOG": 0
+      }
+    },
+    "Context": {
+      "PF-LPA": 1,
+      "PF-CRG": 0,
+      "EF-OTB": 0,
+      "EF-SWS": 0,
+      "EF-DFTC": 0,
+      "EF-INOB": 0,
+      "EF-SPB": 0
+    },
+    "Evaluation_Outcome": "IA",
+    "Solutions": [
+      { "Category": "BUX", "Type": "Campaign for Proper Waste Disposal" },
+      { "Category": "BUX", "Type": "Sports-Themed Engagement Program" }
+    ]
+  },
+  {
+    "CaseID": "07",
+    "User_Basic_Information": {
+      "User_Interaction_Type": "Visitor",
+      "Scenario": "Walking"
+    },
+    "Problem": {
+      "Disposal_Behavior": {
+        "PO-PD": 0,
+        "PO-RC": 0,
+        "PO-PULPD": 0,
+        "NT-DNRO": 0,
+        "NT-POT": 1,
+        "NG-IRBU": 0,
+        "NG-DTPR": 0,
+        "NG-LOG": 0
+      }
+    },
+    "Context": {
+      "PF-LPA": 0,
+      "PF-CRG": 0,
+      "EF-OTB": 0,
+      "EF-SWS": 0,
+      "EF-DFTC": 0,
+      "EF-INOB": 0,
+      "EF-SPB": 1
+    },
+    "Evaluation_Outcome": "A",
+    "Solutions": [
+      { "Category": "BUX", "Type": "Incentives for Packing Out Trash" },
+      { "Category": "SUX", "Type": "Ensure Accessible Waste Points on Routes" }
+    ]
+  },
+  {
+    "CaseID": "08",
+    "User_Basic_Information": {
+      "User_Interaction_Type": "Visitor",
+      "Scenario": "Picnic"
+    },
+    "Problem": {
+      "Disposal_Behavior": {
+        "PO-PD": 0,
+        "PO-PD": 0,
+        "PO-RC": 0,
+        "PO-PULPD": 0,
+        "NT-DNRO": 0,
+        "NT-POT": 1,
+        "NG-IRBU": 0,
+        "NG-DTPR": 0,
+        "NG-LOG": 0
+      }
+    },
+    "Context": {
+      "PF-LPA": 0,
+      "PF-CRG": 0,
+      "EF-OTB": 0,
+      "EF-SWS": 1,
+      "EF-DFTC": 0,
+      "EF-INOB": 0,
+      "EF-SPB": 0
+    },
+    "Evaluation_Outcome": "A",
+    "Solutions": [
+      { "Category": "SUX", "Type": "Increase bins during seasonal peaks" },
+      { "Category": "TUX", "Type": "Adaptive Waste Collection Schedule (Predictive Analytics)" }
+    ]
+  },
+  {
+    "CaseID": "09",
+    "User_Basic_Information": {
+      "User_Interaction_Type": "Visitor",
+      "Scenario": "Participating Events"
+    },
+    "Problem": {
+      "Disposal_Behavior": {
+        "PO-PD": 0,
+        "PO-RC": 0,
+        "PO-PULPD": 0,
+        "NT-DNRO": 1,
+        "NT-POT": 0,
+        "NG-IRBU": 0,
+        "NG-DTPR": 0,
+        "NG-LOG": 0
+      }
+    },
+    "Context": {
+      "PF-LPA": 0,
+      "PF-CRG": 0,
+      "EF-OTB": 1,
+      "EF-SWS": 0,
+      "EF-DFTC": 0,
+      "EF-INOB": 0,
+      "EF-SPB": 0
+    },
+    "Evaluation_Outcome": "IA",
+    "Solutions": [
+      { "Category": "SUX", "Type": "Temporary Event Waste Stations" },
+      { "Category": "TUX", "Type": "Educational Signage during Events" }
+    ]
+  },
+  {
+    "CaseID": "10",
+    "User_Basic_Information": {
+      "User_Interaction_Type": "Vendor",
+      "Scenario": "Event Selling"
+    },
+    "Problem": {
+      "Disposal_Behavior": {
+        "PO-PD": 0,
+        "PO-RC": 0,
+        "PO-PULPD": 0,
+        "NT-DNRO": 0,
+        "NT-POT": 0,
+        "NG-IRBU": 0,
+        "NG-DTPR": 1,
+        "NG-LOG": 0
+      }
+    },
+    "Context": {
+      "PF-LPA": 0,
+      "PF-CRG": 0,
+      "EF-OTB": 0,
+      "EF-SWS": 0,
+      "EF-DFTC": 1,
+      "EF-INOB": 0,
+      "EF-SPB": 0
+    },
+    "Evaluation_Outcome": "IA",
+    "Solutions": [
+      { "Category": "SUX", "Type": "Increase Trashcan Placement for Vendors" },
+      { "Category": "TUX", "Type": "Wayfinding System for Waste Locations (Vendor App)" }
+    ]
+  }
+]
