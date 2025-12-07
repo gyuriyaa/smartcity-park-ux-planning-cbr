@@ -9,6 +9,7 @@ A Smart City CBR system that analyzes park user behavior and recommends optimize
 # 📌 Table of Contents
 - [About The Project](#about-the-project)
 - [CBR Workflow](#cbr-workflow)
+- [Case Features](#cbr-features)
 - [Case Structure](#case-structure)
 - [Similarity Model](#similarity-model)
 - [Repository Structure](#repository-structure)
@@ -62,6 +63,109 @@ Feedback Loop →
   - Monitor real-world performance  
   - Update case base with new outcomes
   - Improve system accuracy over time  
+
+
+___
+# Case Features
+
+This CBR system relies on structured cases representing **user behavior**, **context**, and **UX-related outcomes** within a Smart City park environment.  
+Each case consists of three major components: **User Basic Information**, **Problem**, and **Solutions**.
+
+---
+
+## **1. User Basic Information**
+
+### **1-1. User Type**
+Represents who is interacting with the park environment.
+
+- **Visitor**  
+  (Recreational users, casual users)
+
+### **1-2. Scenario**
+Describes what activity the user is performing.
+
+- Walking  
+- Picnic  
+- Playground Activities  
+- Sports Activities  
+- Participating in Events  
+
+---
+
+## **2. Problem**
+
+This section describes the user’s **behavior (Variable A)** and the surrounding **context (Variable B)** that influenced the behavior.
+
+---
+
+### **2-1. Disposal Behavior**  
+**Variable A (User Behavior)**  
+Describes the waste disposal action taken by the user.
+
+- Packing out trash  
+- Proper disposal  
+- Recycling correctly  
+- Picking up litter & ensuring proper disposal  
+- Disposing trash in a public restroom  
+- Trash disposal without recycling  
+- Littering  
+
+---
+
+### **2-2. Context**  
+**Variable B (User Context)**  
+Environmental or personal conditions influencing user behavior.
+
+#### **Personal Factors**
+- Lack of public awareness  
+- Confusing sorting/recycling guidelines  
+
+#### **Environmental Factors**
+- Overflowing trash bin  
+- Seasonal waste spike  
+- Difficult to find trash can (lack of signage)  
+- Insufficient number of bins (relative to area and foot traffic)  
+
+---
+
+### **2-3. Evaluation Consequence (A + B)**  
+Represents how appropriate the behavior was, considering both the behavior and the context together.
+
+- **Appropriate (A)**  
+- **Inappropriate (IA)**  
+
+---
+
+## **3. Solutions**
+
+### **3-1. UX Solutions (Basic UX Suggestions)**  
+Design or communication interventions that can mitigate the problem.
+
+- Campaign for proper waste disposal  
+- Waste volume management  
+- Clear recycling guidelines  
+- Adaptive bin placement based on population  
+- Provide trash can signage  
+- Add additional bins  
+
+---
+
+### **3-2. Smart Solutions (Advanced Interventions)**  
+Combined or technology-driven solutions derived from UX suggestions.
+
+#### **A. Integrated Waste Management System**
+- Predictive waste handling  
+- Adjust collection schedules based on bin sensor data  
+
+#### **B. Smart Recycling Stations**
+- Marked recycling stations  
+- Reward-based participation (e.g., NFC/QR tagging)  
+
+#### **C. Public Engagement and Awareness Programs**
+- Recycling education  
+- Sport-based or gamified recycling activities  
+
+---
 
 
 ---
